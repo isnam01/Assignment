@@ -1,23 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import screen from "../src/assets/chart3.png";
+import image from "../src/assets/Rect.png";
+import "./App.css";
+import Header from "./components/header";
+import HedaerContent from "./components/headerContent";
+import Feature from "./components/features";
+import Automated from "./components/automated";
+import Prebuild from "./components/prebuils";
+import Fully from "./components/fully";
+import Footer from "./components/footer";
+import FooterContent from "./components/footerContent";
+import Cards from "./components/card";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="upper_div">
+        <Header />
+        <HedaerContent />
+      </div>
+      <div className="img1">
+        <img src={screen} className="image1"></img>
+      </div>
+      <div className="img2">
+        <img src={image} className="image2"></img>
+      </div>
+      <Feature />
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          padding: "100px 0px",
+          justifyContent: "center",
+        }}
+      >
+        <Automated />
+        <Fully />
+        <Prebuild />
+      </div>
+      <div className="lower_div">
+        <FooterContent />
+        <Cards />
+        <Footer />
+      </div>
     </div>
   );
 }
